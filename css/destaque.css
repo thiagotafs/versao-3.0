@@ -1,0 +1,87 @@
+.tab-pane { padding:0 10px}
+
+.nav-tabs  li { margin:0; width:50%}
+
+#destaque-not {
+	width:600px;
+	min-height:210px;
+	position:relative;
+	background-color: #EEEEEE;
+	padding:10px;
+	border-radius: 5px
+}
+
+.not-img-dest {float:left; margin:0 5px 0 0; border-radius:5px; overflow:hidden}
+
+.not-publicidade { background-color:#FFF; position:absolute; z-index:6; width:600px; height:205px; border-radius:5px; overflow:hidden}
+
+#ribbon {
+	position:absolute;
+	top:-3px;
+	left:-15px;
+	z-index:500;
+}
+#frame {
+	position:absolute;
+	z-index:0;
+	width:739px;
+	height:341px;
+	top:-3px;
+	left:-80px;
+}
+#slides {
+	position:absolute;
+	z-index:100;
+}
+.slides_container {
+	width:600px;
+	overflow:hidden;
+	position:relative;
+	display:none;
+}
+.slides_container div.slide {
+	width:600px;
+	height:210px;
+	display:block;
+}
+
+.slide h1 img {
+	margin-right:10px;
+}
+
+.slide ul {
+	font-size: 13px;
+	color: #666;
+	padding: 0 0 10px 170px;
+}
+.slide ul li {
+	list-style:square url("../img/destaque/ico-yes.png");
+	margin-left:22px;
+	padding:4px;
+}
+#destaque-not .pagination {
+	margin: -31px 0 0 387px;
+	width: 168px;
+	height: 18px;
+	z-index: 5;
+	position: absolute;
+}
+#destaque-not .pagination li {
+	float:left;
+	margin:0 5px;
+	list-style:none;
+}
+#destaque-not .pagination li a {
+	display: block;
+	width: 10px;
+	height: 0;
+	background-color: #fff;
+	border: 1px solid#ccc;
+	border-radius: 10px;
+	float: left;
+	overflow: hidden;
+	padding-top:10px
+}
+#destaque-not .pagination li.current a {
+	background-color: #666;
+}

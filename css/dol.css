@@ -1,0 +1,461 @@
+
+
+.clear{ clear:both}
+
+/*** CORES ***/
+
+.cor-dol, .cor-dol a {color:#333 !important}
+.cor-noticia, .cor-noticia a {color:#0D5489 !important}
+.cor-esporte, .cor-esporte a {color:#2F822F !important}
+.cor-entretenimento, .cor-entretenimento a {color:#4C0066 !important}
+.cor-multimidia, .cor-multimidia a {color:#006666 !important}
+.cor-ee, .cor-ee a{color:#C00 !important}
+
+.bg-cor-dol{ background-color:#333 !important; color:#fff !important}
+.bg-cor-noticia{background-color:#0D5489 !important; color:#fff !important}
+.bg-cor-esporte {background-color:#2F822F !important; color:#fff !important}
+.bg-cor-entretenimento {background-color:#4C0066 !important; color:#fff !important}
+.bg-cor-multimidia {background-color:#006666 !important; color:#fff !important}
+.bg-cor-ee{background-color:#C00 !important; color:#fff !important}
+
+.bg-cor-dol a, .bg-cor-noticia a, .bg-cor-esporte a, .bg-cor-entretenimento a, .bg-cor-multimidia a, .bg-cor-ee a{color:#fff !important}
+
+
+/*** FIM CORES ***/
+
+.topo {
+	background:url(../img/bg-topo.png);
+	height:145px;
+	border-bottom:5px solid #e2e2e2;
+}
+#login {
+	background:#f4f4f4;
+}
+#login h1 {
+	font-size: 21px;
+	background: url(../img/bg-topo-not.png);
+	margin: 0 0 10px;
+	padding: 10px;
+	color: #fff;
+	font-weight: normal;
+	text-align:center;
+}
+#login input[type="text"], input[type="password"] {
+	width: 307px;
+	padding: 10px;
+}
+#login input[type="button"] {
+	width: 80px;
+}
+#login p {
+	margin: 0;
+	padding: 0 10px;
+}
+#login p span {
+	width: 248px;
+	float: left;
+	padding: 5px 0;
+	font-size: 12px;
+	text-decoration: underline;
+}
+.login-cad {
+	background: url(../img/bg-topo.png);
+	margin-top: 10px;
+	padding: 10px;
+}
+#pesquisa {
+	background:#f4f4f4;
+}
+#pesquisa h1 {
+	font-size: 21px;
+	background: url(../img/bg-topo-not.png);
+	margin: 0 0 10px;
+	padding: 10px;
+	color: #fff;
+	font-weight: normal;
+	text-align:center;
+}
+#pesquisa input[type="text"] {
+	width: 212px;
+	padding:10px;
+	-webkit-border-radius: 24px 0 0 24px;
+	-moz-border-radius: 24px 0 0 24px;
+	border-radius: 24px 0 0 24px;
+}
+#pesquisa button[type="submit"] {
+	padding:10px 15px;
+	-webkit-border-radius: 0 24px 24px 0;
+	-moz-border-radius: 0 24px 24px 0;
+	border-radius: 0 24px 24px 0;
+}
+#pesquisa form {
+	margin: 0;
+	padding: 0 10px;
+}
+.logo {
+	float: left;
+	margin-top: 20px;
+}
+.super-banner {
+	position:absolute;
+	width:728px;
+	height:90px;
+	background:#CCC;
+	margin: 10px 0 0 212px;
+}
+.menu {
+	float: right;
+	margin: 110px 0 0 0;
+	height: 35px;
+}
+.menu-not {
+	color:#0D5489 !important;
+	margin-left:1px;
+	font-family: 'Patua One', cursive;
+	-webkit-border-top-left-radius: 4px;
+	-webkit-border-top-right-radius: 4px;
+	-moz-border-radius-topleft: 4px;
+	-moz-border-radius-topright: 4px;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+}
+.menu-not:hover {
+	border-top:3px solid #0D5489;
+	margin-top:-3px;
+}
+.not-ativo {
+	border-top:3px solid #0D5489;
+	margin-top:-3px;
+}
+.menu-esp {
+	color:#2F822F !important;
+	margin-left:1px;
+	font-family: 'Patua One', cursive;
+	-webkit-border-top-left-radius: 4px;
+	-webkit-border-top-right-radius: 4px;
+	-moz-border-radius-topleft: 4px;
+	-moz-border-radius-topright: 4px;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+}
+.menu-esp:hover {
+	border-top:3px solid #2F822F;
+	margin-top:-3px;
+}
+.esp-ativo {
+	border-top:3px solid #2F822F;
+	margin-top:-3px;
+}
+.menu-ent {
+	color:#4C0066 !important;
+	margin-left:1px;
+	font-family: 'Patua One', cursive;
+	-webkit-border-top-left-radius: 4px;
+	-webkit-border-top-right-radius: 4px;
+	-moz-border-radius-topleft: 4px;
+	-moz-border-radius-topright: 4px;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+}
+.menu-ent:hover {
+	border-top:3px solid #4C0066;
+	margin-top:-3px;
+}
+.ent-ativo {
+	border-top:3px solid #4C0066;
+	margin-top:-3px;
+}
+.menu-mult {
+	color:#006666 !important;
+	margin-left:1px;
+	font-family: 'Patua One', cursive;
+	-webkit-border-top-left-radius: 4px;
+	-webkit-border-top-right-radius: 4px;
+	-moz-border-radius-topleft: 4px;
+	-moz-border-radius-topright: 4px;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+}
+.menu-mult:hover {
+	border-top:3px solid #006666;
+	margin-top:-3px;
+}
+.mult-ativo {
+	border-top:3px solid #006666;
+	margin-top:-3px;
+}
+.menu-edi {
+	color:#C00 !important;
+	margin-left:1px;
+	font-family: 'Patua One', cursive;
+	-webkit-border-top-left-radius: 4px;
+	-webkit-border-top-right-radius: 4px;
+	-moz-border-radius-topleft: 4px;
+	-moz-border-radius-topright: 4px;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+}
+.menu-edi:hover {
+	border-top:3px solid #C00;
+	margin-top:-3px;
+}
+.edi-ativo {
+	border-top:3px solid #C00;
+	margin-top:-3px;
+}
+.menu-bt {
+	margin-left:1px;
+	font-family: 'Patua One', cursive;
+	-webkit-border-top-left-radius: 4px;
+	-webkit-border-top-right-radius: 4px;
+	-moz-border-radius-topleft: 4px;
+	-moz-border-radius-topright: 4px;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+	padding: 8px 10px !important;
+}
+.menu-bt:hover {
+	border-top:3px solid #666;
+	margin-top:-3px;
+}
+.menu-bt img {
+	width: 19px;
+	height: 19px;
+	border: none;
+	margin-top: -2px;
+}
+.drop-ent {
+	border-bottom: 3px solid #4C0066 !important;
+}
+.drop-ent li {
+	margin:0 !important;
+}
+
+/*** NOTICIAS HOME ***/
+
+.chapeu{ margin:2px 0 0 0; text-transform:uppercase; font-family: 'Patua One', cursive; font-size:12px;}
+.mt-20 { margin-top:20px}
+
+.mb-0{ margin-bottom:0}
+.mb-10{ margin-bottom:10px}
+.mb-50{ margin-bottom:50px}
+
+.bdr-none { border-right:none !important}
+
+.border-b { border-bottom:1px dotted #c0c0c0}
+.info-not { font-size:11px; color:#c0c0c0;}
+.info-not a {color:#c0c0c0 !important;}
+.info-not a:hover  {color:#333 !important;}
+.not-img-1 {float:left; margin:5px 5px 0 0; border-radius:5px; overflow:hidden}
+
+
+
+/*** BOXES ***/
+.box-titulo { border-radius:5px; margin:20px 0 0 0; background-color:#DDDDDD; color: #666666}
+.box-titulo h2, .box-titulo h3, .box-titulo h4 { padding:10px}
+.icone-titulo { background-image:url(../img/bg-icone-home.png); float:left; padding:8px 10px 12px 10px; border-radius: 5px 0 0 5px; margin:0 10px 0 0}
+
+.box-area { background-color:#EEEEEE; border-top: 5px solid; border-radius:5px; overflow:hidden; margin:20px 0 }
+.box-area-2 { background-image:url(../img/bg-cinza-claro.png); border-top: 5px solid; border-radius:5px; overflow:hidden; margin:20px 0; }
+.box-area-2 .carousel {padding:20px 10px 0 10px; text-align:center; min-height: 320px}
+.box-area-2 .box-conteudo {padding:0 10px; color:#333}
+.box-area-img { border-top: 5px solid; border-radius:5px; overflow:hidden; margin:20px 0 0 0 }
+	.box-area-img img {width:100%}
+.box-area-img2 { border-bottom: 5px solid; border-radius:5px; overflow:hidden; margin:15px 0 0 0 }
+	.box-area-img2 img {width:100%}
+.box-area-dol-tv { background-image:url(../img/titulo-dol-tv.png); background-repeat:no-repeat; border-top: 5px solid; border-radius:5px; overflow:hidden; margin:20px 0 }
+.box-conteudo {padding:10px; color:#333}
+.bd-b {border-bottom: 5px solid}
+.bd-paginacao {height:28px; border-radius: 0 0 5px 5px }
+.bd-paginacao li a { color:#fff}
+.dol-quer-saber {text-align: center; color: #999999;	padding:20px; background-image:url(../img/depoimento.png); background-repeat:no-repeat; font-size:12px; line-height:15px;}
+
+#video-img ul {padding:0; margin:0}
+#video-img ul li {list-style:none}
+
+.box-banner { border-radius:5px; overflow:hidden; margin:20px 0 }
+
+.area-cinema-home{ padding:0; margin:0}
+.box-conteudo-cine {color:#333; padding:0; margin:0}
+.box-conteudo-cine li { width:16.5%; float:left; list-style:none; margin:10px; color:#333}
+
+.publicidade-centro { background-image:url(../img/bg-cinza-escuro.png); border-radius:5px; padding:10px 0}
+.publicidade-centro img{ float:left;}
+.banner-centro-1 { float:left; width:120px; height:60px}
+.banner-centro-2 { float:left; width:468px; height:60px; margin-left:10px}
+.banner-centro-3 { float:left; width:300px; height:60px; margin-left:10px}
+
+/*** dol imoveis home ***/
+.cor-dolimoveis { color: #0866A0}
+.estagio-obra {position: absolute; margin: -65px 0 0 25px; padding: 10px 15px; font-size: 16px; color: #FFF; text-shadow: 0 1px 1px #999; font-weight: bolder;
+line-height: 16px; border: 2px #FFF solid; -moz-border-radius: 4px; border-radius: 4px; z-index: 1099; max-width: 150px;}
+.estagio-obra a {color:#fff}
+.imoveis-cor-pronto {background-color: #99CC33;}
+.imoveis-cor-obra {background-color: #FFCC00;}
+.imoveis-cor-4 {background-color: #990000;}
+
+.cor-facebook { color: #3C5A95}
+
+.blogs-home { margin:0 0 0 5px}
+.blogs-home li { margin:10px 5px; list-style:none; background-color:#E9E9E9; border:1px solid #DDDDDD}
+.cont-blog {padding:5px; color:#333}
+.cont-blog img { float:left; margin:0 10px 0 0}
+.bt-ver-mais { border-radius:5px 5px 0 0; padding:5px 0 2px 0; font-size:12px; width:220px; margin:0 auto; text-align:center; font-weight:bold}
+.bt-ver-mais a {color:#fff;}
+
+.cor-shopping { color:#8F83A7}
+.bg-cor-shopping {background-color:#8F83A7; color:#fff}
+
+.play-dolagora { float: left; margin-top: -75%; width: 100%;}
+.play-dolagora img {width: 100%;}
+
+
+/*** FIM NOTICIAS HOME ***/
+
+/*** FPGAINA-LOGIN ***/
+.divisoria { border-top: 1px solid #ddd; border-bottom:1px solid #fff; margin:10px 0 }
+
+.area-de-login {
+	color:#666666;
+	margin:0 auto;
+	width: 350px;
+}
+.area-de-login h1{ font-size:18px; text-align:center;}
+
+.area-de-login input[type="text"], input[type="password"] {
+	width: 307px;
+	padding: 10px;
+}
+.area-de-login input[type="button"] {
+	width: 80px;
+}
+.area-de-login p {
+	margin: 0;
+	padding: 0 10px;
+}
+.area-de-login p span {
+	width: 248px;
+	float: left;
+	padding: 5px 0;
+	font-size: 12px;
+	text-decoration: underline;
+}
+
+.area-login-cad { background-color:#ddd; text-align:center; margin-top:20px; padding:0 0 20px 0}
+.area-login-cad h3{padding:20px 0} 
+
+/*** FIM PAGINA LOGIN ***/
+
+/*** NOTICIAS ***/
+.tab-pane h2 a {color: #666 !important}
+.tab-pane h2 a:hover {color: #333 !important}
+
+.compartilhar-not { padding:0; margin:0 0 0 3px;}
+.compartilhar-not p{ padding:0; margin:0; float:left; font-size:9px; color:#868686}
+.compartilhar-not li{ margin:0; text-decoration:underline; list-style:none; float:left; font-size:9px;}
+.compartilhar-not .comp-twitter { color:#00A3D8;}
+.compartilhar-not .comp-twitter a { color:#00A3D8; border-right:1px solid #868686; padding:0 5px}
+.compartilhar-not .comp-facebook { color:#0C5388;}
+.compartilhar-not .comp-facebook a { color:#0C5388; border-right:1px solid #868686; padding:0 5px}
+.compartilhar-not .comp-google { color:#B20000;}
+.compartilhar-not .comp-google a { color:#B20000; padding:0 5px}
+
+.not-img-int {float:left; margin:5px 5px 0 0; border-radius:5px; padding:10px; background-color:#EEEEEE; overflow:hidden}
+
+.credito-foto {background-image:url(../img/icon-foto-leg.png); background-repeat:no-repeat; background-position: right; margin:5px 0 0 0; color: #666666; font-size:11px}
+
+.ler-tambem {margin:0; padding:0}
+.ler-tambem li {list-style:none; border-bottom:1px dotted #c0c0c0; padding:10px 0}
+.ler-tambem li h4 {float:left; margin:0 5px 0 0}
+.ler-tambem li p {float:left; margin:1px 0 0 0}
+
+.box-titulo-coment { border-radius:5px; margin:20px 0 0 0; background-color:#DDDDDD; color: #666666}
+.box-titulo-coment h4 { padding:10px;}
+.comentarios-titulo { background-image:url(../img/bg-icone-home.png); float:right; padding:10px; border-radius: 0 5px 5px 0; margin:-45px 0 0 0}
+.comentarios-titulo a {color:#fff}
+.comentarios {margin:0; padding:0}
+.comentarios li { list-style:none; border-bottom: 1px dotted #c0c0c0; margin:20px 0 0 0}
+
+.box-paginas {background-color:#EEEEEE; border-radius:5px; margin: 0 0 20px 0;}
+.box-paginas .pagina { float:left; padding:16px 10px 0 10px}
+.box-paginas .pagination ul{ margin:10px; float:right; border:1px solid #CECECE; border-radius:5px}
+.box-paginas .pagination ul li{ height:28px; width:28px; float:left; list-style:none;  text-align:center; font-weight:bold }
+.box-paginas .pagination ul li a {padding:5px 10px; float:left}
+.box-paginas .pagination ul li a:hover, .box-paginas .pagination ul li a:focus, .box-paginas .pagination ul .active a, .box-paginas .pagination ul .active span {	background-image:url(../img/bg-hover-2.png)}
+
+/*** FIM NOTICIAS ***/
+
+/*** CATEGORIAS ***/
+.categoria-logo { float:left}
+.categoria-descrição { float:right}
+
+
+/*** DOL TV ***/
+.nav-list li {padding:0; border-bottom:1px solid #ddd; border-top:1px solid #fff}
+.nav-list li a {padding:10px; font-family: 'Patua One', cursive; font-size:16px; color: #676767}
+.nav-list li a img{ border-radius:5px; margin:0 5px 0 0}
+
+.videos-mini { margin:10px 0 0 0; }
+.duracao-video { position:absolute; margin:-30px 0 0 5px; background-image: url(../img/bg-hover.png); border-radius:5px; font-size:12px; color:#fff; padding:2px 7px}
+.videos-mini img { border-radius:5px}
+.videos-mini h4 {margin:5px 0 0 0}
+.videos-mini p a {color:#666}
+
+
+/*** IMAGENS ***/
+
+.imagens-dest img { border-radius:5px;}
+.visualizacao-foto{ position:absolute; margin:-45px 0 0 0; font-size:12px; color:#fff; padding:2px 7px 2px 26px; background-image:url(../img/ico-visualizacoes.png); background-repeat:no-repeat; background-position:7px}
+.visualizacao-foto img { float:left; margin:5px 5px 0 0 }
+
+.box-titulo-filtro { border-radius:5px; background-color:#DDDDDD; color: #666666}
+.box-titulo-filtro h4 { padding:5px 10px; float:left}
+.filtro-titulo { background-image:url(../img/bg-icone-home.png); float:right; padding:5px 10px; border-radius: 0 5px 5px 0; margin:0}
+.filtro-titulo a {color:#fff}
+
+
+footer {
+	background:#eee;
+	border-top:5px solid #ddd;
+}
+.mapa-rodape {
+	margin-bottom:30px;
+	margin-top:10px;
+}
+.mapa-rodape h4 {
+	border-bottom:1px solid #CCC;
+	padding-bottom: 10px;
+}
+.mapa-rodape a {
+	font-size:12px;
+	color:#666;
+}
+.menu-rodape {
+	background:url(../img/bg-menurodape.png);
+}
+.menu-rodape ul {
+	margin:0;
+	padding:0;
+	float:left;
+}
+.menu-rodape ul li {
+	margin:0;
+	padding:0;
+	float:left;
+	list-style:none;
+}
+.menu-rodape ul li a {
+	margin: 0;
+	float: left;
+	list-style: none;
+	font-family: 'Patua One', cursive;
+	color: #ccc;
+	text-align: center;
+	font-size: 12px;
+	padding: 10px 18px;
+}
+.copy {
+	background:#DDD;
+	padding:10px;
+	font-size:11px;
+}
