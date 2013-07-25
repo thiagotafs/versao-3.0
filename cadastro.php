@@ -16,7 +16,7 @@
         <div class="box-area cor-noticia">
         	
             <div class="area-de-login">
-                <h1 class="cor-noticia">AREA LOGIN</h1>
+                <h1 class="cor-noticia">CADASTRO...</h1>
                 <div class="divisoria"></div>
                 <p>Email</p>
                 <p><input type="text"></p>
