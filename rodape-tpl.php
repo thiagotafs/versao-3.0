@@ -60,7 +60,7 @@
   <div class="copy">
     <div class="container">
       <div class="row">
-        <div class="span11 center-res"><a href="">Condições gerais de uso</a> | © Copyright 2013 DOL - Diário Online</div>
+        <div class="span11 center-res"><a href="">Condições gerais de uso</a> | © Copyright {ANO_RODAPE} DOL - Diário Online</div>
         <div class="span1 center-res"><img src="img/logo-rodape.png" /></div>
       </div>
     </div>

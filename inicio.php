@@ -8,20 +8,17 @@ require("../app/biblioteca/Template.class.php");
 	include('inc/box/global.php');
 	#GLOBAL
 		
-	require_once('head.php');
 	$tpl->addFile("BOX_HEAD", "head-tpl.php");
+	require_once('head.php');
 	#HEAD
 	
-	require_once('topo.php');
 	$tpl->addFile("BOX_TOPO", "topo-tpl.php");
+	require_once('topo.php');
 	#TOPO
-	
-	
-	
-	
-	
-	
+		
+		
 	$tpl->addFile("BOX_RODAPE", "rodape-tpl.php");
+	require_once('rodape.php');
 	#RODAPE
 	
 	$tpl->show();
