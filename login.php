@@ -1,5 +1,5 @@
-<?php include 'head.php'; ?>
-<?php include 'topo.php'; ?>
+<?php include 'head-tpl.php'; ?>
+<?php include 'topo-tpl.php'; ?>
 <!-- INICIO CORPO -->
 
 

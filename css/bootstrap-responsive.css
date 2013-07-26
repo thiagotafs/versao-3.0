@@ -1049,7 +1049,7 @@
     border: 1px solid #ccc;
   }
   .form-horizontal .control-label {
-    float: none;
+    float: left;
     width: auto;
     padding-top: 0;
     text-align: left;

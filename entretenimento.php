@@ -1,4 +1,4 @@
-<?php include 'head.php'; ?>
+<?php include 'head-tpl.php'; ?>
 <!-- INICIO TOPO -->
 <div class="navbar-wrapper topo-ent">
   <div class="container">
