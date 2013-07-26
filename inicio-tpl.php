@@ -1,9 +1,38 @@
 {BOX_HEAD}
 {BOX_TOPO}
 <!-- INICIO CORPO -->
+<script type="text/javascript" src="js/enquete.js"> </script>
 
 <script type="text/javascript">
-	 $(document).ready(function(){
+	 $(document).ready(function(){	
+	 
+	 	$('.quersaber-link').click(function(){
+			$('#form-perg-'+$('.quersaber-link').attr('id')).submit();
+			})
+	 	 			
+		
+		 $(".select-quer-saber").click(function(){
+		
+                        var id = $(this).attr("id")
+		
+                        $(".tpl-opiniao-centro").each(function(){
+                            $(this).attr("style","display:none")
+                        })
+		
+                        $(".pag-quer-saber").each(function(){
+                            $(this).removeClass('active')
+                        })
+			
+                         $('#pag-perg-'+id).addClass('active')
+                        $("#quer-saber-"+id).attr("style","display:block")
+                    
+					});
+										
+					//PAGINAÇÂO DOL QUER SABER
+		
+		
+					
+					
         $('.carousel').carousel();
 	 })
 </script>
@@ -108,20 +137,29 @@
                 <div class="box-area cor-dol visible-desktop">
                     <div class="box-conteudo">
                         <h3>DOL QUER SABER</h3>
-                        <h5 class="mt-20">Quem será o campeão dessa copa das confederações?</h5>
-                        <p class="dol-quer-saber">Eduardo, tú já deveria saber que a diferem Neymar vai brilhar no Barcelona? Neymar vai brilhar no Barcelona? Neymar vai brilhar no Barcelona?</p>
-                        <div class="text-center">
-                          <button class="btn btn-inverse" type="button">Leia mais e participe!</button>
+                         
+                        <!-- BEGIN BLOCK_QUERSABER -->
+                        <div class="tpl-opiniao-centro" id="quer-saber-{ID_PERGUNTA}" style="display:{STATUS_PERGUNTA}">
+                            <h5 class="mt-20"><a href="quersaber.php?id={ID_PERGUNTA}" style="color:inherit !important">{TITULO_QUERSABER}</a></h5>
+                            <p class="dol-quer-saber">{COMENTARIO_QUERSABER}</p>
+                            <div class="text-center">
+                              
+                              <form method="get" action="quersaber.php" id="form-perg-{ID_PERGUNTA}">
+                                    <input type="hidden" name="id" value="{ID_PERGUNTA}">
+                                    <button class="btn btn-inverse quersaber-link" id="{ID_PERGUNTA}" type="button">{BT_COMENTARIO}</button>                                    
+                              </form>
+                              
+                            </div>
                         </div>
+                        <!-- END BLOCK_QUERSABER -->
+                        
                     </div><!-- fim box conteudo-->
                     <div class="bd-paginacao bg-cor-dol">
                     	<div class="pagination">
                           <ul>
-                            <li class="active"><a href="#">1</a></li>
-                            <li><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
-                            <li><a href="#">4</a></li>
-                            <li><a href="#">5</a></li>
+                          	<!-- BEGIN BLOCK_QUERSABER_PAG -->
+                            <li {ESTILO_QUERSABER_PAG}  id="pag-perg-{ID_PERGUNTA}"><span class="select-quer-saber" id="{ID_PERGUNTA}">{CONT_QUERSABER_PAG}</span></li>  
+                            <!-- END BLOCK_QUERSABER_PAG -->                          
                           </ul>
                     	</div><!-- fim pagination-->
                     </div><!-- bd-paginacao -->
@@ -174,40 +212,36 @@
                 <div class="box-area cor-dol visible-desktop">
                     <div class="box-conteudo">
                         <h3>ENQUETE</h3>
-                        <form class="form-horizontal">
-                            <p>Quem será o campeão dessa copa das confederações?</p>
+                        
+                        <!-- BEGIN BLOCK_ENQUETE -->
+                        <div class="tpl-enquete-centro" id="enquete-{ID_ENQUETE}" style="display:{STATUS_ENQUETE}">
+                        <p><a href="enquete-interna.php?id={ID_ENQUETE}" style="color:inherit !important">{ENQUETE_TITULO}</a></p>
+                        <form class="form-horizontal" method="post" id="form-enquete-{ID_ENQUETE}">
+                            							
+                            <!-- BEGIN BLOCK_ENQUETE_ALTERNATIVA -->
                             <label class="radio">
-                                <input type="radio" name="optionsRadios" checked>Brasil
+                                <input type="radio" class="fAlternativa{ID_ENQUETE} fAlternativa" id="alt-{ALTERNATIVA_ID}" value="{ALTERNATIVA_ID}" name="fAlternativa"/>{ALTERNATIVA_CONTEUDO}
                             </label>
-                            <label class="radio">
-                                <input type="radio" name="optionsRadios">Espanha
-                            </label>
-                            <label class="radio">
-                                <input type="radio" name="optionsRadios">Japão
-                            </label>
-                            <label class="radio">
-                                <input type="radio" name="optionsRadios">Médico
-                            </label>
-                            <label class="radio">
-                                <input type="radio" name="optionsRadios">Uruguai
-                            </label>
-                            <label class="radio">
-                                <input type="radio" name="optionsRadios">Taiti
-                            </label>
+                            <!-- END BLOCK_ENQUETE_ALTERNATIVA -->
+                            
+                                                                                    
                             <div class="text-center">
-                            <button class="btn btn-inverse" type="button">Votar</button>
-                            <button class="btn btn-inverse" type="button">Resultados</button>
+                            <button class="btn btn-inverse bt-enquete-envia proc-enquete{ID_ENQUETE}" id="{ID_ENQUETE}" type="button">Votar</button>
+                            <button class="btn btn-inverse bt-enquete-result" id="{ID_ENQUETE}" type="button">Resultados</button>
                             </div>
                         </form>
+                        <div style="color:#333;font-weight:bold;font-size:13px !important;display:none" id="msg-{ID_ENQUETE}"></div>
+                            <ul style="display:none;" id="result-{ID_ENQUETE}"></ul>
+                        </div>
+                        <!-- END BLOCK_ENQUETE -->
+                        
                     </div><!-- fim box conteudo-->
                     <div class="bd-paginacao bg-cor-dol">
                     	<div class="pagination">
                           <ul>
-                            <li class="active"><a href="#">1</a></li>
-                            <li><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
-                            <li><a href="#">4</a></li>
-                            <li><a href="#">5</a></li>
+                          <!-- BEGIN BLOCK_ENQUETE_PAG -->
+                            <li {ESTILO_ENQUETE_PAG} id="pag-{ID_ENQUETE}" ><span id="{ID_ENQUETE}" class="select-enquete">{CONT_ENQUETE_PAG}</span></li>
+                          <!-- END BLOCK_ENQUETE_PAG -->  
                           </ul>
                     	</div><!-- fim pagination-->
                     </div><!-- bd-paginacao -->

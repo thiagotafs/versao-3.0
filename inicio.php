@@ -15,7 +15,13 @@ require("../app/biblioteca/Template.class.php");
 	$tpl->addFile("BOX_TOPO", "topo-tpl.php");
 	require_once('topo.php');
 	#TOPO
-		
+	
+	
+	include("inc/box/home/box-enquete.php");
+	#BOX ENQUETE	
+	
+	include("inc/box/home/box-dolquersaber.php");
+	#BOX ENQUETE	
 		
 	$tpl->addFile("BOX_RODAPE", "rodape-tpl.php");
 	require_once('rodape.php');
