@@ -3580,8 +3580,12 @@ button.btn.btn-mini, input[type="submit"].btn.btn-mini {
 	text-decoration: none;
 	border-right: 1px solid #dddddd;
 	border-left-width: 0;
+	cursor:pointer;
 }
 .pagination ul > li > a:hover, .pagination ul > li > a:focus, .pagination ul > .active > a, .pagination ul > .active > span {
+	background-image:url(../img/bg-hover.png)
+}
+.pagination ul > li > span:hover, .pagination ul > li > span:focus, .pagination ul > .active > span, .pagination ul > .active > span {
 	background-image:url(../img/bg-hover.png)
 }
 

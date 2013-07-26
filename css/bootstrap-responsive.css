@@ -1148,9 +1148,9 @@
 	width: 60px;
 }
 
-.videos-mini img { width:100%}
+.videos-mini img {width:100%}
 
-.imagens-dest img{ width:100%}
+.imagens-dest img {width:100%}
 
 .span3 { width:50%; padding:0 10px}
 
@@ -1158,9 +1158,16 @@
 
 .area-de-login { width:100% !important;}
 
-.area-de-login input[type="text"], input[type="password"] {width: 93% !important;}
+.area-de-login input[type="text"], .area-de-login input[type="password"] {width: 93% !important;}
+
 
 .area-login-cad {padding:0 10px 20px 10px !important;}
+
+.bt-cadastro {width:100%}
+
+.cadastro input{width: 93% !important;}
+
+.cadastro .inputsexo {float:left}
 
 }
 

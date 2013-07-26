@@ -8,30 +8,91 @@
     
     <!-- inicio conteudo -->
     <div class="span4">
-    	<div class="box-area cor-noticia"></div>
+    	<div class="box-area cor-noticia">
+            <div class="box-conteudo">
+                <h3 class="cor-noticia">Agilize o seu cadastro</h3>
+                <p>Importe seus dados do facebook, Twitter, Yahoo ou do gmail para agilizar seu cadastro.</p>
+                <a href="#"><img class="bt-cadastro" src="img/bt-cadastro-face.png"></a>
+                <a href="#"><img class="bt-cadastro"  src="img/bt-cadastro-twitter.png"></a>
+                <a href="#"><img class="bt-cadastro"  src="img/bt-cadastro-google.png"></a>
+                <a href="#"><img class="bt-cadastro"  src="img/bt-cadastro-yahoo.png"></a>
+            </div>
+        
+        </div>
     </div>
     
-    <div class="span8">
-    	
-        <div class="box-area cor-noticia">
-        	
-            <div class="area-de-login">
-                <h1 class="cor-noticia">CADASTRO</h1>
+    <div class="span8"> 
+    	<div class="box-area-3">
+    		<h2 class="cor-noticia">FORMULÁRIO DE CADASTRO</h2>
                 <div class="divisoria"></div>
-                <p>Email</p>
-                <p><input type="text"></p>
-                <p>Senha</p>
-                <p><input type="password"></p>
-                <p><span><a href="">Esqueci minha senha</a></span><input type="button" class="btn" value="Entrar"></p>
-            </div>
-            <div class="area-login-cad">
-            	<h3 class="cor-noticia">Caso não tenha uma conta, cadastre-se abaixo: </h3>
-            	<div class="area-de-login">
-            		<button class="btn btn-medium btn-block" type="button"><a href="cadastro.php"><h1 class="cor-noticia">FAÇA SEU CADASTRO</h1></a></button>
-                </div>
-            </div>
+                <form class="form-horizontal cadastro">
+                	<div class="control-group">
+                        <label class="control-label" for="inputNome">Nome</label>
+                        <div class="controls">
+                          <input type="text" id="inputNome">
+                        </div>
+                  	</div>
+                    <div class="control-group">
+                        <label class="control-label" for="inputSobrenome">Sobrenome</label>
+                        <div class="controls">
+                          	<input type="password" id="inputSobrenome" >
+                        </div>
+                    </div>
+                    <div class="control-group">
+                    	<label class="control-label inputsexo" style="margin-right:20px" for="inputSexo">Sexo</label>
+                        <label class="radio inline">
+                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                            Feminino
+                        </label>
+                        <label class="radio inline">
+                            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                            Masculino
+                        </label>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="inputEmail">Email</label>
+                        <div class="controls">
+                          <input type="text" id="inputEmail">
+                        </div>
+                  	</div>
+                    <div class="control-group">
+                        <label class="control-label" for="inputConfEmail">Confirme Email</label>
+                        <div class="controls">
+                          <input type="text" id="inputConfEmail">
+                        </div>
+                  	</div>
+                    <div class="control-group">
+                        <label class="control-label" for="inputLogin">Login</label>
+                        <div class="controls">
+                          	<input type="password" id="inputLogin">
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="inputPassword">Senha</label>
+                        <div class="controls">
+                          	<input type="password" id="inputPassword">
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="inputConfPassword">Confirma Senha</label>
+                        <div class="controls">
+                          	<input type="password" id="inputConfPassword">
+                        </div>
+                    </div>
+                     <div class="control-group">
+                        <label class="control-label" for="inputConfNasc">Data de nascimento</label>
+                        <div class="controls">
+                          	<input type="password" id="inputConfNasc">
+                        </div>
+                    </div>
+                    <div class="control-group">
+                    	<div class="controls">
+                          	<button type="submit" class="btn">Entrar</button>
+                    	</div>
+                  	</div>
+              </form>
+         </div>
             
-        </div>
     </div>
     
    <!-- fim conteudo -->
