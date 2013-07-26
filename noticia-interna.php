@@ -139,4 +139,4 @@
   </div>
 </div>
 <!-- FIM CORPO -->
-<?php include 'rodape.php'; ?>
+<?php include 'rodape-tpl.php'; ?>
