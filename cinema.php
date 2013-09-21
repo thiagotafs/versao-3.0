@@ -1,58 +1,170 @@
 <?php include 'head-tpl.php'; ?>
-<!-- INICIO TOPO -->
-<div class="navbar-wrapper topo">
-  <div class="container">
-  	<div class="super-banner sumir"><img src="http://eprecisomudar.com.br/arq/banner1.jpg"></div>
-    <a class="logo" href="index.php"><img src="img/logo.png"></a>
-    <div class="navbar menu">
-      <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-      <div class="nav-collapse collapse">
-        <ul class="nav">
-          <li><a href="noticias.php" class="menu-not">NOTICIAS</a></li>
-          <li><a href="esporte.php" class="menu-esp">ESPORTES</a></li>
-          <li><a href="cinema.php" class="menu-ent ent-ativo">ENTRETENIMENTO</b></a></li>
-          <!--<li class="dropdown"> <a href="#" class="dropdown-toggle menu-ent" data-toggle="dropdown">ENTRETENIMENTO <b class="caret"></b></a>
-            <ul class="dropdown-menu drop-ent">
-              <li><a href="cinema.php" class="menu-ent-sub">Cinema</a></li>
-              <li><a href="#" class="menu-ent-sub">TechGames</a></li>
-              <li><a href="#" class="menu-ent-sub">Fama</a></li>
-              <li><a href="#" class="menu-ent-sub">Ensaio</a></li>
-            </ul>
-          </li>-->
-          <li><a href="multimidia.php" class="menu-mult">MULTIMIDIA</a>
-          <li><a href="#" class="menu-edi">ED. ELETRÔNICA</a>
-          <li><a href="#" class="menu-bt"><img src="img/ico-login.png" width="20" height="20"></a>
-          <li><a href="#" class="menu-bt"><img src="img/ico-busca.png" width="20" height="20"></a>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- FIM TOPO --> 
+<?php include 'topo-tpl.php'; ?>
 <!-- INICIO CORPO -->
-<div class="container marketing">
-  <div class="row">
-  	<div class="span12" align="center" style="margin:20px">
-    	<img src="img/cinema-corpo.jpg" width="940" height="4107">
-    </div>
-  <!-- 
-    <div class="span4">
-      <h2>Heading</h2>
-      <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
-      <p><a class="btn" href="#">View details &raquo;</a></p>
-    </div>
-    <div class="span4"> 
-      <h2>Heading</h2>
-      <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-      <p><a class="btn" href="#">View details &raquo;</a></p>
-    </div>
-    <div class="span4">
-      <h2>Heading</h2>
-      <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-      <p><a class="btn" href="#">View details &raquo;</a></p>
-    </div>
-   -->
-  </div>
+
+<!-- CODE SLIDER -->
+<link rel="stylesheet" href="css/destaque.css">
+<script src="js/slides.min.jquery.js"></script> 
+<script>
+		$(function(){
+			$('#slides').slides({
+				preload: true,
+				preloadImage: 'img/destaque/loading.gif',
+				play: 5000,
+				pause: 2500,
+				hoverPause: true,
+				animationStart: function(current){
+					$('.caption').animate({
+						bottom:-35
+					},100);
+					if (window.console && console.log) {
+						// example return of current slide number
+						console.log('animationStart on slide: ', current);
+					};
+				},
+				animationComplete: function(current){
+					$('.caption').animate({
+						bottom:0
+					},200);
+					if (window.console && console.log) {
+						// example return of current slide number
+						console.log('animationComplete on slide: ', current);
+					};
+				},
+				slidesLoaded: function() {
+					$('.caption').animate({
+						bottom:0
+					},200);
+				}
+			});
+		});
+	</script> 
+<!-- CODE SLIDER --> 
+
+ <script type="text/javascript">
+	 $(document).ready(function(){
+        $('.carousel').carousel();
+		
+		 $('#myTab a').click(function (e) {
+	   e.preventDefault();
+	   $(this).tab('show');
+	 })
+	 })
+
+</script>
+    
+
+<div class="container">
+  	<div class="row">
+    	<!-- inicio conteudo -->
+        <div class="span12">
+            <div class="box-titulo bg-cor-entretenimento">
+                <div class="icone-titulo" style="margin-right:0; border-right:1px solid #fff"><a href="index.php"><img src="img/icone-home.png"></a></div>
+                <div class="navbar">
+                	<div class="navbar-inner">
+                    	<ul class="nav">
+                      		<li class="active"><a href="cinema.php">Início</a></li>
+                      		<li><a href="cinema-cartaz.php">Em cartaz</a></li>
+                            <li><a href="cinema-trailers.php">Trailers</a></li>
+                    	</ul>
+                  	</div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="span8 mt-20">
+        <!--inicio do destaque-->
+            <div class="row visible-desktop">
+                <div class="span4">
+                    <?php include 'destaque-cat.php'; ?>
+                </div>
+            </div>
+         
+        <!-- fim destaque-->
+        </div><!-- fim span8 -->
+        
+        <div class="span4">
+        	<div class="box-area cor-entretenimento">
+                <div class="bg-cor-entretenimento text-center" style="border-bottom:1px solid #fff">
+                    <h4 style="margin:0; padding:5px 0 10px 0">TRAILER</h4>
+                </div>
+                <object width="300" height="180"><param name="movie" value="http://www.youtube.com/v/_qkQJHGIVqg&amp;fs=1"><param name="allowFullScreen" value="true"><param name="allowscriptaccess" value="always"><embed src="http://www.youtube.com/v/_qkQJHGIVqg&amp;fs=1" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="300" height="180"></object>
+                
+            </div>
+        </div><!-- fim span4 -->
+        <div class="clear"></div>
+        <div class="span12">
+            <div class="box-titulo bg-cor-entretenimento">
+                <h4>EM CARTAZ</h4>
+            </div>
+        </div>
+        <div class="span3">
+        	<div class="box-cinza text-center">
+            	<a href="cinema-interna.php"><img src="img/cartaz-cinema.jpg"></a>
+                <h2 class="cor-entretenimento"><a href="cinema-interna.php">Turbo</a></h2>
+            </div>
+        </div>
+        <div class="span3">
+        	<div class="box-cinza text-center">
+            	<a href="cinema-interna.php"><img src="img/cartaz-cinema.jpg"></a>
+                <h2 class="cor-entretenimento"><a href="cinema-interna.php">Turbo</a></h2>
+            </div>
+        </div>
+        <div class="span3">
+        	<div class="box-cinza text-center">
+            	<a href="cinema-interna.php"><img src="img/cartaz-cinema.jpg"></a>
+                <h2 class="cor-entretenimento"><a href="cinema-interna.php">Turbo</a></h2>
+            </div>
+        </div>
+        <div class="span3">
+        	<div class="box-cinza text-center">
+            	<a href="cinema-interna.php"><img src="img/cartaz-cinema.jpg"></a>
+                <h2 class="cor-entretenimento"><a href="cinema-interna.php">Turbo</a></h2>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div class="span12">
+            <div class="box-titulo bg-cor-entretenimento">
+                <h4>NOTICIAS</h4>
+            </div>
+        </div>
+        <div class="span3">
+        	<div class="box-cinza">
+            	<a href="noticia-interna.php"><img src="img/miniatura-4.jpg"></a>
+                <h4 class="cor-entretenimento"><a href="noticias-interna.php">Titulo noticia</a></h4>
+                <p><a href="noticias-interna.php">Sessão Maldita exibe filme gore japonês</a></p>
+            </div>
+        </div>
+        <div class="span3">
+        	<div class="box-cinza">
+            	<a href="noticia-interna.php"><img src="img/miniatura-4.jpg"></a>
+                <h4 class="cor-entretenimento"><a href="noticias-interna.php">Titulo noticia</a></h4>
+                <p><a href="noticias-interna.php">Sessão Maldita exibe filme gore japonês</a></p>
+            </div>
+        </div>
+        <div class="span3">
+        	<div class="box-cinza">
+            	<a href="noticia-interna.php"><img src="img/miniatura-4.jpg"></a>
+                <h4 class="cor-entretenimento"><a href="noticias-interna.php">Titulo noticia</a></h4>
+                <p><a href="noticias-interna.php">Sessão Maldita exibe filme gore japonês</a></p>
+            </div>
+        </div>
+        <div class="span3">
+        	<div class="box-cinza">
+            	<a href="noticia-interna.php"><img src="img/miniatura-4.jpg"></a>
+                <h4 class="cor-entretenimento"><a href="noticias-interna.php">Titulo noticia</a></h4>
+                <p><a href="noticias-interna.php">Sessão Maldita exibe filme gore japonês</a></p>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div class="span12 bd-b cor-entretenimento mb-10 mt-20">
+            <div class="bt-ver-mais bg-cor-entretenimento"><a href="#">Clique aqui e veja mais noticias...</a></div>
+        </div>
+        
+     </div><!-- fim row -->
+   
+   <!-- fim conteudo -->
+   </div>
 </div>
 <!-- FIM CORPO -->
 <?php include 'rodape-tpl.php'; ?>

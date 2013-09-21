@@ -19,7 +19,7 @@
         <div class="box-banner visible-desktop"><img src="img/banner.jpg"></div>
         <div class="box-banner visible-desktop"><img src="img/banner.jpg"></div>
         
-        <div class="box-area bd-b cor-noticia">
+        <div class="box-area tabs-lateral bd-b cor-noticia">
         
         <ul class="nav nav-tabs" id="myTab">
           <li class="active"><a href="#vistos">Mais visualizados</a></li>

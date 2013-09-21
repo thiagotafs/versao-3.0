@@ -2206,6 +2206,7 @@ table td[class*="span"], table th[class*="span"], .row-fluid table td[class*="sp
 	-moz-transition: height 0.35s ease;
 	-o-transition: height 0.35s ease;
 	transition: height 0.35s ease;
+	z-index:999;
 }
 .collapse.in {
 	height: auto;
@@ -2876,7 +2877,7 @@ button.btn.btn-mini, input[type="submit"].btn.btn-mini {
 	line-height: 14px;
 }
 .nav-tabs {
-	border-bottom: 1px solid #ddd;
+	background:#fff
 }
 .nav-tabs > li {
 	margin-bottom: -1px;
@@ -3027,6 +3028,7 @@ button.btn.btn-mini, input[type="submit"].btn.btn-mini {
 }
 .tab-content > .active, .pill-content > .active {
 	display: block;
+	color:#666
 }
 .tabs-below > .nav-tabs {
 	border-top: 1px solid #ddd;
@@ -3102,7 +3104,6 @@ button.btn.btn-mini, input[type="submit"].btn.btn-mini {
 .navbar {
  *position: relative;
  *z-index: 2;
-	margin-bottom: 20px;
 	overflow: visible;
 }
 .navbar-inner {
@@ -3750,6 +3751,7 @@ button.btn.btn-mini, input[type="submit"].btn.btn-mini {
 .modal-header {
 	padding: 9px 15px;
 	border-bottom: 1px solid #eee;
+	border-radius:5px
 }
 .modal-header .close {
 	margin-top: 2px;

@@ -3,14 +3,14 @@
   <div class="menu-rodape">
     <div class="container">
       <ul>
-        <li><a href="">FALE CONOSCO</a></li>
-        <li><a href="">CENTRAL DO ASSINANTE</a></li>
-        <li><a href="">TEM!</a></li>
-        <li><a href="">ASSINE</a></li>
-        <li><a href="">ANUNCIE</a></li>
-        <li><a href="">POLITICA DE PRIVACIDADE</a></li>
-        <li><a href="">TRABALHE NO DOL</a></li>
-        <li><a href="">EXPEDIENTE</a></li>
+        <li><a href="fale-conosco.php">FALE CONOSCO</a></li>
+        <li><a href="central.php">CENTRAL DO ASSINANTE</a></li>
+        <li><a href="http://adbasee.rbadecomunicacao.com.br/webbaseCUSTOM/en/std/jsp/WebBaseMain.do" target="_blank">TEM!</a></li>
+        <li><a href="assine.php">ASSINE</a></li>
+        <li><a href="anuncie.php">ANUNCIE</a></li>
+        <li><a href="privacidade.php">POLITICA DE PRIVACIDADE</a></li>
+        <li><a href="trabalhe.php">TRABALHE NO DOL</a></li>
+        <li><a href="expediente.php">EXPEDIENTE</a></li>
       </ul>
     </div>
   </div>

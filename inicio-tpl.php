@@ -1,50 +1,15 @@
 {BOX_HEAD}
 {BOX_TOPO}
 <!-- INICIO CORPO -->
-<script type="text/javascript" src="js/enquete.js"> </script>
-
-<script type="text/javascript">
-	 $(document).ready(function(){	
-	 
-	 	$('.quersaber-link').click(function(){
-			$('#form-perg-'+$('.quersaber-link').attr('id')).submit();
-			})
-	 	 			
-		
-		 $(".select-quer-saber").click(function(){
-		
-                        var id = $(this).attr("id")
-		
-                        $(".tpl-opiniao-centro").each(function(){
-                            $(this).attr("style","display:none")
-                        })
-		
-                        $(".pag-quer-saber").each(function(){
-                            $(this).removeClass('active')
-                        })
-			
-                         $('#pag-perg-'+id).addClass('active')
-                        $("#quer-saber-"+id).attr("style","display:block")
-                    
-					});
-										
-					//PAGINAÇÂO DOL QUER SABER
-		
-		
-					
-					
-        $('.carousel').carousel();
-	 })
-</script>
+<script type="text/javascript" src="js/home/enquete.js"> </script>
+<script type="text/javascript" src="js/home/dol-quersaber.js"></script>
+<script type="text/javascript" src="js/home/blog-paginacao.js"></script>
+<script type="text/javascript" src="js/home/dol-agora.js"> </script>
+<script type="text/javascript" src="js/home/ensaio-imoveis-carousel.js"></script>
+<script type="text/javascript" src="js/home/radios.js"> </script>
 
 <div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/pt_BR/all.js#xfbml=1";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+<script type="text/javascript" src="js/home/box-facebook.js"></script>
 
 <div class="container marketing">
   <div class="row">
@@ -68,6 +33,7 @@
                     <p class="info-not"><img src="img/ico-data.png">10/05/2013 <a href="noticia-interna.php"><img src="img/ico-comentario.png">10 cometários</a></p>
                     <div class="clear"></div>
                 </div>
+                
                 <div class="border-b mb-10">
                     <p class="chapeu cor-entretenimento">Chapeu fama</p>
                     <h2><a href="noticia-interna.php">Curro Velho abre inscrições para oficinas</a></h2>
@@ -215,7 +181,7 @@
                         
                         <!-- BEGIN BLOCK_ENQUETE -->
                         <div class="tpl-enquete-centro" id="enquete-{ID_ENQUETE}" style="display:{STATUS_ENQUETE}">
-                        <p><a href="enquete-interna.php?id={ID_ENQUETE}" style="color:inherit !important">{ENQUETE_TITULO}</a></p>
+                        <p><strong><a href="enquete-interna.php?id={ID_ENQUETE}" style="color:inherit !important">{ENQUETE_TITULO}</a></strong></p>
                         <form class="form-horizontal" method="post" id="form-enquete-{ID_ENQUETE}">
                             							
                             <!-- BEGIN BLOCK_ENQUETE_ALTERNATIVA -->
@@ -231,7 +197,7 @@
                             </div>
                         </form>
                         <div style="color:#333;font-weight:bold;font-size:13px !important;display:none" id="msg-{ID_ENQUETE}"></div>
-                            <ul style="display:none;" id="result-{ID_ENQUETE}"></ul>
+                            <ul style="display:none; padding:0; margin:0" id="result-{ID_ENQUETE}"></ul>
                         </div>
                         <!-- END BLOCK_ENQUETE -->
                         
@@ -303,21 +269,21 @@
             </div>
             <div id="video-exibir" style="display:none">
             	<object width="100%" height="200" style="margin: 0 0 5px 0; float:left; ">
-                <param name="movie" value="http://www.youtube.com/v/KIdDxGGTgow?version=3&amp;hl=pt_BR">
+                <param name="movie" value="http://www.youtube.com/v/{ID_YOUTUBE_DESTAQUE_DOLTV}?version=3&amp;hl=pt_BR">
                 <param name="allowFullScreen" value="true">
                 <param name="allowscriptaccess" value="always">
-                <embed src="http://www.youtube.com/v/KIdDxGGTgow?version=3&amp;hl=pt_BR&amp;autoplay=1" type="application/x-shockwave-flash" width="290" height="200" allowscriptaccess="always" allowfullscreen="true" wmode="transparent">
+                <embed src="http://www.youtube.com/v/{ID_YOUTUBE_DESTAQUE_DOLTV}?version=3&amp;hl=pt_BR&autoplay=1" type="application/x-shockwave-flash" width="290" height="200" allowscriptaccess="always" allowfullscreen="true" wmode="transparent">
                  </object>
             </div>
-            <div id="video-img" style="cursor:pointer" nid="1133">
+            <div id="video-img" style="cursor:pointer" nid="{ID_YOUTUBE}">
                  <ul>
-                 	<li><img width="100%" style="margin: 0 0 5px 0; float:left;" src="http://img.youtube.com/vi/KIdDxGGTgow/0.jpg"></li>
+                 	<li><img width="100%" style="margin: 0 0 5px 0; float:left;" src="http://img.youtube.com/vi/{ID_YOUTUBE_DESTAQUE_DOLTV}/0.jpg"></li>
                     <li class="play-dolagora"><img src="img/play-dol.png"></li>
                     <div class="clear"></div>
                  </ul>
             </div>
             <div class="box-conteudo">
-            	<h5>Artistas realizam ato público em Belém</h5>
+            	<h5>{TITULO_DESTAQUE_DOLTV}</h5>
             </div>
       	</div><!-- FIM dol agora -->
         <div class="box-banner visible-desktop"><img src="img/banner.jpg"></div>
@@ -377,9 +343,9 @@
         	<h3 class="text-center">RÁDIOS</h3>
             <div class="box-conteudo">
             <div class="row-fluid">
-                <div class="span4"><a href="#"><img src="img/radio-1.png"></a></div>
-                <div class="span4"><a href="#"><img src="img/radio-2.png"></a></div>
-                <div class="span4"><a href="#"><img src="img/radio-3.png"></a></div>
+                <div class="span4"><a href="javascript:popup('http://radioclube.diarioonline.com.br/radio/')"><img src="img/radio-1.png"></a></div>
+                <div class="span4"><a href="javascript:popup('http://www.radio99.com.br/radio/')"><img src="img/radio-2.png"></a></div>
+                <div class="span4"><a href="javascript:popup('http://www.radiodiariofm.com.br/radio/')"><img src="img/radio-3.png"></a></div>
            	</div>
             </div>
        </div>
@@ -401,49 +367,52 @@
                         </div>
                         <div id="video-img" style="cursor:pointer">
                              <ul>
-                                <li><img width="100%" style="margin: 0; float:left;" src="http://img.youtube.com/vi/KIdDxGGTgow/0.jpg"></li>
+                                <li>
+                                <!--<img width="100%" style="margin: 0; float:left;" src="http://img.youtube.com/vi/KIdDxGGTgow/0.jpg">-->
+                                <iframe title="YouTube video player" width="300" height="200" src="http://www.youtube.com/embed/{DOLAGORA_ARQUIVO}" frameborder="0" allowfullscreen="" id="{DOLAGORA_CAPA}" Onclick="Javascript:alert('1')"></iframe>
+                                </li>
                                 <li style="position: absolute;background:url(img/play-dol.png) no-repeat; list-style: none;width: 300px;height: 200px;margin: 20px 5px;"></li>
                              </ul>
                         </div>
                     </div>
-                        <p class="chapeu cor-multimidia">Chapeu multimidia</p>
-                        <h2><a href="noticia-interna.php">Curro Velho abre inscrições para oficinas</a></h2>
-                        <p class="info-not"><img src="img/ico-data.png">10/05/2013 <a href="noticia-interna.php"><img src="img/ico-comentario.png">10 cometários</a></p>
+                    
+                        <!--<p class="chapeu cor-multimidia">Chapeu multimidia</p>-->
+                        <h2><a href="galerias-doltv-prog.php?video={DOLAGORA_ARQUIVO}">{DOLAGORA_TITULO}</a></h2>
+                        <p class="info-not">
+                        <img src="img/ico-data.png">{DOLAGORA_DATA} | <a href="noticia-interna.php"><!--<img src="img/ico-comentario.png">-->{DOLAGORA_VISIT}</a></p>
                     <div class="clear"></div>
                      
                 </div><!-- FIM coluna 1 -->
                 <div class="span4" style="margin-top:95px">
                 	<h3>Mais videos</h3>
-                    <div class="border-b mb-10">
-                        <div class="not-img-1"><a href="noticia-interna.php"><img src="img/miniatura-2.jpg"></a></div>
-                        <p class="chapeu cor-multimidia">Chapeu multimidia</p>
-                        <h2><a href="noticia-interna.php">Curro Velho abre inscrições para oficinas</a></h2>
-                        <p class="info-not"><img src="img/ico-data.png">10/05/2013 <a href="noticia-interna.php"><img src="img/ico-comentario.png">10 cometários</a></p>
+                    
+                    <!-- BEGIN VIDEOS_EM_DESTAQUE_C1 -->
+                    <div class="{BORDA_VIDEO} mb-10">
+                        <div class="not-img-1"><a href="videos_interna.php?id={ID_YOUTUBE_EM_DESTAQUE}" title="{TITULO_EM_DESTAQUECP}"><img src="{IMG_EM_DESTAQUE}" width="117" height="80"></a></div>
+                        
+                        <p class="chapeu cor-multimidia"></p>
+                        
+                        <h2><a href="videos_interna.php?id={ID_YOUTUBE_EM_DESTAQUE}" title="{TITULO_EM_DESTAQUECP}">{TITULO_EM_DESTAQUE} {CADEADO}{ICONE_NOTICIA}</a></h2>
+                        <p class="info-not"><img src="img/ico-data.png">{VIDEO_DOLTV_DATA} | <a href="videos_interna.php?id={ID_YOUTUBE_EM_DESTAQUE}" title="{TITULO_EM_DESTAQUECP}"><!--<img src="img/ico-comentario.png">-->{VISITASVID} visualizações</a></p>
                     <div class="clear"></div>
                     </div>
-                    <div class="mb-10">
-                        <div class="not-img-1"><a href="noticia-interna.php"><img src="img/miniatura-2.jpg"></a></div>
-                        <p class="chapeu cor-multimidia">Chapeu multimidia</p>
-                        <h2><a href="noticia-interna.php">Curro Velho abre inscrições para oficinas</a></h2>
-                        <p class="info-not"><img src="img/ico-data.png">10/05/2013 <a href="noticia-interna.php"><img src="img/ico-comentario.png">10 cometários</a></p>
-                    <div class="clear"></div>
-                    </div>
+                    <!-- END VIDEOS_EM_DESTAQUE_C1 -->
+                    
+                    
                 </div><!-- FIM coluna 2 -->
                 <div class="span4" style="margin-top:123px">
-                	<div class="border-b mb-10">
-                        <div class="not-img-1"><a href="noticia-interna.php"><img src="img/miniatura-2.jpg"></a></div>
-                        <p class="chapeu cor-multimidia">Chapeu multimidia</p>
-                        <h2><a href="noticia-interna.php">Curro Velho abre inscrições para oficinas</a></h2>
-                        <p class="info-not"><img src="img/ico-data.png">10/05/2013 <a href="noticia-interna.php"><img src="img/ico-comentario.png">10 cometários</a></p>
+                	
+                    <!-- BEGIN VIDEOS_EM_DESTAQUE_C2 -->
+                    <div class="{BORDA_VIDEO} mb-10">
+                        <div class="not-img-1"><a href="videos_interna.php?id={ID_YOUTUBE_EM_DESTAQUE}" title="{TITULO_EM_DESTAQUECP}"><img src="{IMG_EM_DESTAQUE}" width="117" height="80"></a></div>
+                        
+                        <p class="chapeu cor-multimidia"></p>
+                        
+                        <h2><a href="videos_interna.php?id={ID_YOUTUBE_EM_DESTAQUE}" title="{TITULO_EM_DESTAQUECP}">{TITULO_EM_DESTAQUE} {CADEADO}{ICONE_NOTICIA}</a></h2>
+                        <p class="info-not"><img src="img/ico-data.png">{VIDEO_DOLTV_DATA} | <a href="videos_interna.php?id={ID_YOUTUBE_EM_DESTAQUE}" title="{TITULO_EM_DESTAQUECP}"><!--<img src="img/ico-comentario.png">-->{VISITASVID} visualizações</a></p>
                     <div class="clear"></div>
                     </div>
-                    <div class="mb-10">
-                        <div class="not-img-1"><a href="noticia-interna.php"><img src="img/miniatura-2.jpg"></a></div>
-                        <p class="chapeu cor-multimidia">Chapeu multimidia</p>
-                        <h2><a href="noticia-interna.php">Curro Velho abre inscrições para oficinas</a></h2>
-                        <p class="info-not"><img src="img/ico-data.png">10/05/2013 <a href="noticia-interna.php"><img src="img/ico-comentario.png">10 cometários</a></p>
-                    <div class="clear"></div>
-                    </div>
+                    <!-- END VIDEOS_EM_DESTAQUE_C2 -->
                 
                 </div><!-- FIM coluna 3 -->
             </div>
@@ -455,26 +424,16 @@
             	<h4 style="margin:0; padding:5px 0 10px 0">CINEMA</h4>
             </div>
             <ul class="box-conteudo-cine">
-            	<li>
-                	<img src="img/capa-cinema.jpg">
-                    <h5 class="text-center">Titulo do filme</h5>
-                </li>
+            	
+                <!-- BEGIN BLOCK_FILME -->
                 <li>
-                	<img src="img/capa-cinema.jpg">
-                    <h5 class="text-center">Titulo do filme</h5>
+                	<a href="cinema-cartaz-detalhes.php?id={ID_FILME}" ><img src="http://www.diarioonline.com.br/app/painel/modulo-cinema/img/imagembd/capa/{IMG_FILME}" ></a>
+                    <h5 class="text-center">{TITULO_FILME}</h5>
                 </li>
-                <li>
-                	<img src="img/capa-cinema.jpg">
-                    <h5 class="text-center">Titulo do filme</h5>
-                </li>
-                <li>
-                	<img src="img/capa-cinema.jpg">
-                    <h5 class="text-center">Titulo do filme</h5>
-                </li>
-                <li>
-                	<img src="img/capa-cinema.jpg">
-                    <h5 class="text-center">Titulo do filme</h5>
-                </li>
+                <!-- END BLOCK_FILME -->
+                
+                
+                
             </ul>
         </div>
     </div>
@@ -494,27 +453,17 @@
             <div id="EnsaioCarousel" class="carousel slide">
                   <!-- Itens de carousel -->
                   <div class="carousel-inner">
-                    <div class="active item">
-                    	<img style="margin:0 auto 10px" src="img/miniatura-ensaio.jpg">
-                        <h3>Paula Diocesano</h3>
+                  
+                   <!-- BEGIN BLOCK_ENSAIO_FEMININO_CAPA -->
+                    <div class="item {ENSAIO_FEMININO_ATIVO}">
+                    	<a href="ensaio-f.php"><img width="220" height="261" style="margin:0 auto 10px" src="{IMAGEMF_CAPA}"></a>
+                        <h3>{TITULOF_CAPA}</h3>
                         <div class="box-conteudo">
-                        	<p>Tema do Ensaio</p>
+                        	<p>{SUBTITULOF_CAPA}</p>
                         </div>
                     </div>
-                    <div class="item">
-                    	<img style="margin:0 auto 10px" src="img/miniatura-ensaio.jpg">
-                        <h3>Ensaio 2</h3>
-                        <div class="box-conteudo">
-                        	<p>Tema do Ensaio</p>
-                        </div>
-                    </div>
-                    <div class="item">
-                    	<img style="margin:0 auto 10px" src="img/miniatura-ensaio.jpg">
-                        <h3>Ensaio 3</h3>
-                        <div class="box-conteudo">
-                        	<p>Tema do Ensaio</p>
-                        </div>
-                    </div>
+                   <!-- END BLOCK_ENSAIO_FEMININO_CAPA --> 
+                   
                   </div>
                   <!-- Navegador do carousel -->
                   <a class="carousel-control left" href="#EnsaioCarousel" data-slide="prev"><img src="img/seta-prev.png"></a>
@@ -528,30 +477,20 @@
             <div id="DolImoveisCarousel" class="carousel slide">
                   <!-- Itens de carousel -->
                   <div class="carousel-inner">
-                    <div class="active item">
-                    	<a href="empreendimento.php?idimovel=58" target="_blank"><img style="margin:0 auto 10px" src="img/miniatura-imoveis.jpg"></a>
-                        <div class="estagio-obra imoveis-cor-pronto"><a href="empreendimento.php?idimovel=58" target="_blank">Obras Iniciadas</a></div>
-                        <h3>Imóvel 1</h3>
+                   
+                   
+                   <!-- BEGIN BLOCK_IMOVEL -->
+                    <div class="item {IMOVEL_ATIVO}">
+                    	<a href="http://imoveis.diarioonline.com.br/empreendimento.php?idimovel={IMOVEL_ID}" target="_blank"><img style="margin:0 auto 10px" width="220" height="261" src="{IMOVEL_IMG}"></a>
+                        <div class="estagio-obra {IMOVEL_ESTAGIO_CSS}"><a href="http://imoveis.diarioonline.com.br/empreendimento.php?idimovel={IMOVEL_ID}" target="_blank">{IMOVEL_ESTAGIO}</a></div>
+                        <h3>{IMOVEL_NOME}</h3>
                         <div class="box-conteudo">
-                        	<p>Umarizal / Belém 1 dormitório, sendo 1 suíte - 42m² ou 2 dormitórios, sendo 1 suíte - 56m²</p>
+                        	<p>{IMOVEL_DESCRICAO}</p>
                         </div>
                     </div>
-                    <div class="item">
-                    	<a href="empreendimento.php?idimovel=58" target="_blank"><img style="margin:0 auto 10px" src="img/miniatura-imoveis.jpg"></a>
-                        <div class="estagio-obra imoveis-cor-pronto"><a href="empreendimento.php?idimovel=58" target="_blank">Obras Iniciadas</a></div>
-                        <h3>Imóvel 1</h3>
-                        <div class="box-conteudo">
-                        	<p>Umarizal / Belém 1 dormitório, sendo 1 suíte - 42m² ou 2 dormitórios, sendo 1 suíte - 56m²</p>
-                        </div>
-                    </div>
-                    <div class="item">
-                    	<a href="empreendimento.php?idimovel=58" target="_blank"><img style="margin:0 auto 10px" src="img/miniatura-imoveis.jpg"></a>
-                        <div class="estagio-obra imoveis-cor-pronto"><a href="empreendimento.php?idimovel=58" target="_blank">Obras Iniciadas</a></div>
-                        <h3>Imóvel 1</h3>
-                        <div class="box-conteudo">
-                        	<p>Umarizal / Belém 1 dormitório, sendo 1 suíte - 42m² ou 2 dormitórios, sendo 1 suíte - 56m²</p>
-                        </div>
-                    </div>
+                    <!-- END BLOCK_IMOVEL -->
+                    
+                    
                   </div>
                   <!-- Navegador do carousel -->
                   <a class="carousel-control left" href="#DolImoveisCarousel" data-slide="prev"><img src="img/seta-prev.png"></a>
@@ -570,58 +509,19 @@
             <div class="bg-cor-dol" style="border-bottom:1px solid #fff">
             	<h4 style="margin:0; padding:5px 0 10px 10px">BLOGS</h4>
             </div>
-        	<ul class="blogs-home">
-            	<li class="span3">
-                	<div class="cont-blog">
-                        <img src="img/img-blog.jpg">
-                        <h5>Gerson Nogueira</h5>
-                    </div>
-                </li>
+        	<ul class="blogs-home" paginacao="1" >
+            	<!-- BEGIN DADOS_BLOGG -->
                 <li class="span3">
                 	<div class="cont-blog">
-                        <img src="img/img-blog.jpg">
-                        <h5>Gerson Nogueira</h5>
+                        <a href="{URLDOBLOG}" title="{TITULO_BLOG}"><img src="{IMGCAPA}" alt="{TITULO_BLOG}" width="37" height="30" title="{DESCBLOG}"></a>
+                        <h5><a href="{URLDOBLOG}">{TITULO_BLOG}</a></h5>
                     </div>
                 </li>
-                <li class="span3">
-                	<div class="cont-blog">
-                        <img src="img/img-blog.jpg">
-                        <h5>Gerson Nogueira</h5>
-                    </div>
-                </li>
-                <li class="span3">
-                	<div class="cont-blog">
-                        <img src="img/img-blog.jpg">
-                        <h5>Gerson Nogueira</h5>
-                    </div>
-                </li>
-                <li class="span3">
-                	<div class="cont-blog">
-                        <img src="img/img-blog.jpg">
-                        <h5>Gerson Nogueira</h5>
-                    </div>
-                </li>
-                <li class="span3">
-                	<div class="cont-blog">
-                        <img src="img/img-blog.jpg">
-                        <h5>Gerson Nogueira</h5>
-                    </div>
-                </li>
-                <li class="span3">
-                	<div class="cont-blog">
-                        <img src="img/img-blog.jpg">
-                        <h5>Gerson Nogueira</h5>
-                    </div>
-                </li>
-                <li class="span3">
-                	<div class="cont-blog">
-                        <img src="img/img-blog.jpg">
-                        <h5>Gerson Nogueira</h5>
-                    </div>
-                </li>
+                <!-- END DADOS_BLOGG --> 
+               
             </ul>
             <div class="clear"></div>
-            <div class="bt-ver-mais bg-cor-dol"><a href="#">Clique aqui e veja mais blogs...</a></div>
+            <div class="bt-ver-mais bg-cor-dol" style="cursor:pointer"><a href="#" onclick="return false">Clique aqui e veja mais blogs...</a></div>
         </div>
    
    		<div class="box-area cor-shopping bd-b">

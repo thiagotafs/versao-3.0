@@ -55,7 +55,7 @@ if(isset($_COOKIE["diarioonline_enquete"]) && $_COOKIE["diarioonline_enquete"] !
 										
 										$nPorcentagem =  substr( ($nVotoEspecifico*100) / $nVotoTotal,0,5) > 0 ? substr( ($nVotoEspecifico*100) / $nVotoTotal,0,5) : 0;
 										
-										$sListResultado .= "<li style='list-style:none;padding:2px' ><span style='background-color:#469BC3;height:5px;width:".$nPorcentagem."px'></span>&nbsp;&nbsp;".stripslashes(utf8_encode($oAlternativa->getConteudo()))." ".$nPorcentagem."%</li>";
+										$sListResultado .= "<li style='list-style:none;padding:2px' ><span style='background-color:#469BC3;height:5px;width:".$nPorcentagem."px'></span>&nbsp;&nbsp;".stripslashes(utf8_encode($oAlternativa->getConteudo()))." ".$nPorcentagem."% <div class='progress progress-cor-dol'>  <div class='bar' style='width: ".$nPorcentagem."%'></div></li>";
 										
 										//$nTotalEnquete += $nPorcentagem;
 										

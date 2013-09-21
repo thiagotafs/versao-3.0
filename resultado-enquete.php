@@ -28,7 +28,7 @@ $voTotalEnquete = $oFachadaRecursos->recuperaTodosEnqueteVoto("WHERE id_alternat
 										
 										$nPorcentagem =  number_format( ($nVotoEspecifico*100) / $nVotoTotal,2) > 0 ? number_format( ($nVotoEspecifico*100) / $nVotoTotal,2) : 0;
 										
-										$sListResultado .= "<li style='list-style:none;padding:2px' ><span style='background-color:#469BC3;height:5px;width:".$nPorcentagem."px'></span>&nbsp;&nbsp;".stripslashes(utf8_encode($oAlternativa->getConteudo()))." ".$nPorcentagem."%</li>";
+										$sListResultado .= "<li style='list-style:none;padding:2px' ><span style='background-color:#469BC3;height:5px;width:".$nPorcentagem."px'></span>&nbsp;&nbsp;".stripslashes(utf8_encode($oAlternativa->getConteudo()))." ".$nPorcentagem."% <div class='progress progress-cor-dol'>  <div class='bar' style='width: ".$nPorcentagem."%'></div></li>";
 										
 										
 										}// se objeto

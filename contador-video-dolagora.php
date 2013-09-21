@@ -1,7 +1,6 @@
 <?
-
-include_once 'app/painel/modulo-doltv/classes/class.Fachada.php';
-include_once 'app/painel/modulo-video/classes/class.Fachada.php';
+include_once '../app/painel/modulo-doltv/classes/class.Fachada.php';
+include_once '../app/painel/modulo-video/classes/class.Fachada.php';
 
 // Criando um objeto do tipo Fachada
 $fachada = new FachadaVideo ();

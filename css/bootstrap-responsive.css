@@ -83,7 +83,9 @@
 /* Landscape phones and down */
 @media (max-width: 480px) {
 	.sumir { display:none}
-	
+	/*** CATEGORIAS ***/
+	.categoria-logo { float:none !important;text-align:center !important;}
+	.categoria-descrição { float:none !important;text-align:center !important;padding: 0 0 15px !important;}
 }
 
 
@@ -1050,7 +1052,7 @@
   }
   .form-horizontal .control-label {
     float: left;
-    width: auto;
+    width: 75px;
     padding-top: 0;
     text-align: left;
   }
@@ -1167,7 +1169,11 @@
 
 .cadastro input{width: 93% !important;}
 
-.cadastro .inputsexo {float:left}
+.cadastro .control-label { width:auto;}
+
+.cadastro .inputsexo {float:none}
+
+.cadastro .inputsexo-item { width:20px}
 
 }
 

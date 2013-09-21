@@ -20,7 +20,9 @@
     <div class="span12">
         <div class="box-area cor-multimidia">
         	<div class="categoria-logo"><img src="img/categ-doltv.png"></div>
-            <div class="categoria-descrição"><img src="img/categ-doltv-desc.png"></div>
+            <div class="categoria-descrição">
+              <h2>Assista as melhores reportagens<br />e os programas da RBATV ao vivo!</h2>
+            </div>
             <div class="clear"></div>
         </div>
         
